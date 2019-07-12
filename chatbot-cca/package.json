@@ -1,0 +1,15 @@
+{
+  "name": "chatbot-cca",
+  "version": "1.0.0",
+  "description": "A sample Express + Twilio project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cybergitt@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.0",
+    "twilio": "^3.31.0"
+  }
+}
