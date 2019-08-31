@@ -13,7 +13,6 @@ const server = http.createServer(function (req, res) {
     res.write("The additional number are currently: " + additional.AddNumber(10, 13) + "<br>");
     res.write("The additional Date are currently: " + additional.myDateTime());
     res.end();
-// Console will print the message
 });
 
 server.listen(port, hostname, (err) => {
