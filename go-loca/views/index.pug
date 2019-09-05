@@ -1,0 +1,41 @@
+doctype html
+html
+  meta(http-equiv='refresh', content='30')
+  title Go Loca Delivery Tracking System
+  head
+    style.
+      #map {
+      height: 400px;
+      width: 100%;
+      }
+  body
+    img(src='http://mittalclothing.com/files/images/logo.png')
+    h3 Go Loca Delivery Tracking System
+    #map
+    script.
+      function initMap() {
+      var uluru = {
+      lat: #{lat},
+      lng: #{lng}
+      };
+      var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 20,
+      center: uluru
+      });
+      var goldStar = {
+      path: 'M10 10 L10 35 L35 35 L35 10 Z',
+      fillColor: 'pink',
+      fillOpacity: 0.8,
+      scale: 1,
+      strokeColor: 'black',
+      strokeWeight: 2
+      };
+      var marker = new google.maps.Marker({
+      position: uluru,
+      icon: goldStar,
+      label: "Delivery Person",
+      map: map
+      });
+      }
+    script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD1Wi5CVJv5dMh2N7wS8AkZujmv-n_4ok8&callback=initMap')
+    h5 Note: Location will be auto-updated after very 30 secs, to update in between refresh this page
