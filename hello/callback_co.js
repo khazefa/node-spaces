@@ -5,7 +5,9 @@ var csv = function() {
         var data = fs.readFileSync(fileName, 'utf8');
         var returnedData = doSomething(null, data, delimiter);
         console.log(returnedData);
-    }
+    };
+
+    this.msgSuccess = () => "Success";
 };
 
 function doSomething(err, data, delimiter) {
@@ -28,4 +30,6 @@ var csvHandler = new csv();
 
 console.log("Program Start");
 var test = csvHandler.csvFileToArray('spaj_001.csv', '|');
+var msg = csvHandler.msgSuccess();
 console.log(test);
+console.log(msg)
