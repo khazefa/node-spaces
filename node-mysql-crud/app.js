@@ -26,6 +26,16 @@ db.connect((err) => {
     }
     console.log('Connected to database');
 });
+
+// const db = mysql.createPool({
+//     connectionLimit: 10,
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'secret',
+//     database: 'socka',
+//     socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock' // for MAMP Web Server
+// });
+
 global.db = db;
 
 // configure middleware
