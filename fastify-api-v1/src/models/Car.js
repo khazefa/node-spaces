@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const carSchema = new mongoose.Schema({
     title: String,
     brand: String,
-    price: String,
+    price: Number,
     age: Number,
     services: {
         type: Map,
